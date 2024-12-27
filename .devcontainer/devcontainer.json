@@ -1,0 +1,17 @@
+{
+  "name": "My flowiseai",
+  "image": "flowiseai/flowise",
+  "hostRequirements": {
+    "cpus": 4
+  },
+  "portsAttributes": {
+    "3000": {
+      "label": "Application",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder}/.flowise,target=/root/.flowise,type=bind,consistency=cached"
+  ],
+  "overrideCommand": false
+}
